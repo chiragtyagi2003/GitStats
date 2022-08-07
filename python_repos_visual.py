@@ -50,7 +50,7 @@ data = [{
     #style the bars
     'marker':{
         'color':'rgb(252, 165, 3)',
-        'line':{'width':1.5, 'color': 'rgb(255, 255, 255)'}
+        'line':{'width':1.5, 'color': 'rgb(0, 0, 255)'}
     },
 
     'opacity':1,
