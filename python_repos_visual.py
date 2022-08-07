@@ -49,11 +49,11 @@ data = [{
 
     #style the bars
     'marker':{
-        'color':'rgb(0, 255, 255)',
+        'color':'rgb(252, 165, 3)',
         'line':{'width':1.5, 'color': 'rgb(255, 255, 255)'}
     },
 
-    'opacity':0.6,
+    'opacity':1,
 
 }]
 
