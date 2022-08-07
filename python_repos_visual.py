@@ -28,13 +28,32 @@ data = [{
     'type':'bar',
     'x':repo_names,
     'y':repo_stars,
+
+    #style the bars
+    'marker':{
+        'color':'rgb(0, 255, 255)',
+        'line':{'width':1.5, 'color': 'rgb(255, 255, 255)'}
+    },
+
+    'opacity':0.6,
+
 }]
 
 #layout for the graph
 my_layout = {
     'title': 'Most Starred Python Projects on GitHub',
-    'xaxis': {'title': 'Repository'},
-    'yaxis': {'title':'Stars'},
+    'titlefont': {'size': 28},
+    'xaxis': {
+        'title': 'Repository',
+        'titlefont': {'size':24},
+        'tickfont': {'size':14},
+    },
+
+    'yaxis': {
+        'title':'Stars',
+        'titlefont':{'size':24},
+        'tickfont': {'size':14},
+    },
 }
 
 #plot the graph
