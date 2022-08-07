@@ -18,16 +18,27 @@ response_dict = r.json()
 repo_dicts = response_dict['items']
 
 #store the names and stars of all repos
-repo_names, repo_stars = [], []
+repo_names, repo_stars, labels = [], [], []
 for repo_dict in repo_dicts:
     repo_names.append(repo_dict['name'])
     repo_stars.append(repo_dict['stargazers_count'])
+
+    #information to show as a tooltip
+    owner = repo_dict['owner']['login']
+    description = repo_dict['description']
+    
+    label = f"{owner}<br />{description}"
+    labels.append(label)
+    
 
 #make visualization
 data = [{
     'type':'bar',
     'x':repo_names,
     'y':repo_stars,
+
+    #show toottip when hovered upon a bar
+    'hovertext':labels,
 
     #style the bars
     'marker':{
